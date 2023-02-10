@@ -1,0 +1,31 @@
+const Newsletter = require('../models/newsletter');
+const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
+const sendEmail = require('../utils/sendEmail');
+
+//Register a Subscriber
+exports.registerSubscriber = catchAsyncErrors(async (req, res, next) => {
+  const { name, email } = req.body;
+
+  const user = await Newsletter.create({
+    name,
+    email
+  });
+
+//   await sendEmail({
+//     email: user.email,
+//     subject: 'Thank you for subscribing!',
+//     message: `Hi ${user.name},\n\nThank you for subscibing to our newsletter. Keep up-to date with.`,
+//   });
+
+//   await sendEmail({
+//     email: 'admin@tefljobsinasia.com',
+//     subject: 'New Subsciber!',
+//     message: `You have a new subscriber.\n\nUser details:\nName: ${user.name}\nEmail: ${user.email}`,
+//   });
+
+  res.status(200).json({
+    success: true,
+    message: `Email sent to ${user.email}`,
+  });
+
+});

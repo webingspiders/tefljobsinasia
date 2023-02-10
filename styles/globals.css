@@ -1,26 +1,90 @@
 html,
-body {
+body, h1, h2, h3{
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #EFEADD;
+}
+
+body.active_modal{
+  overflow-y: hidden;
+}
+
+h2{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h3{
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+letter-spacing: -0.015em;
+
+color: #FFFFFF;
+}
+
+p{
+  font-size: 19px;
+}
+
+h1{
+  font-size: 48px;
+  font-weight: 800;
+}
 a {
   color: inherit;
   text-decoration: none;
+}
+
+li{
+  list-style: none;
 }
 
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DAAA9E;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+.slick-slide > div {
+  margin: 10px 15px;
+}
+.slick-list {
+  margin: -10px -15px;
+}
+
+::placeholder{
+  color: grey;
+}
+
+@media(max-width: 940px){
+  h1{
+    font-size: 36px;
   }
-  body {
-    color: white;
-    background: black;
+
+  h2{
+    font-size: 30px;
+  }
+
+  h3{
+    font-size: 25px;
   }
 }

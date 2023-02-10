@@ -1,0 +1,241 @@
+.native_hero{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.native_img{
+    position: relative;
+    height: 100%;
+    min-height: 600px;
+    width: 50%;
+}
+
+.native_hero button{
+    width: fit-content;
+}
+
+.native_container{
+    padding-top: 150px;
+}
+
+/* .perks{
+    
+}
+/* 
+.perks h2{
+    color: #ffffff;
+    margin-top: 120px;
+}
+
+.perks p{
+    color: #ffffff;
+} */
+
+/* .perk_display{
+    border-radius: 60px;
+    padding: 150px 90px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url('../public/Perks\ of\ Living\ in\ HK.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 130px 0;
+} */
+
+.requirements{
+    background-color: #62559A;
+}
+
+.requirements_img{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    min-height: 600px;
+}
+
+.requirements_content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 250px 0;
+}
+
+.requirements_content h2, .requirements_content p, .requirements_content li{
+    color: #fff;
+}
+
+.requirements_content li{
+    list-style: disc;
+}
+
+#statement{
+    color: #DAAA9E;
+}
+
+.checklist{
+    display: flex;
+    flex-direction: column;
+}
+
+.apply_main{
+    background-color: #DAAA9E;
+    margin: 150px 0;
+}
+
+.apply_img{
+    margin-top: -80px;
+}
+
+.apply_content{
+    width: 50%;
+    text-align: center;
+}
+
+.apply_content h2{
+    color: #62559A;
+}
+
+.apply_content p{
+    color: #ffffff;
+}
+
+.signup_main{
+    background-color: #62559A;
+}
+
+.signup_content{
+    width: 50%;
+}
+
+.signup_content p{
+    color: #ffffff;
+}
+
+.signup_content h2{
+    color: #ffffff;
+}
+
+.forInstitutions{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .educationInst{
+    padding: 150px 0;
+  }
+  
+  .educationInst h2{
+    color: #62559A;
+  }
+
+  .educationInst img{
+    width: 50%;
+  }
+  
+  #filler{
+    color: #DAAA9E;
+    font-weight: 600;
+  }
+
+  .didYouKnow{
+    padding: 150px 0;
+  }
+
+  .didYouKnow_container{
+    max-width: 1000px;
+  }
+
+  .didYouKnow_container h2{
+    color: #62559A;
+  }
+
+  .didYouKnowInfo{
+    background: #DAAA9E;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 90px 120px;
+    max-width: 1000px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 80px auto;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .didYouKnowInfo #buildings{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .didYouKnowInfo #clouds{
+    position: absolute;
+    top: 40px;
+    right: 0;
+  }
+
+  .didYouKnowInfo p{
+    width: 60%;
+    color: #ffffff;
+  }
+
+  .cta_img{
+    position: relative;
+    min-height: 600px;
+    height: 100%;
+    width: 50%;
+  }
+
+  @media(max-width: 940px){
+    .native_img, .native_hero, .requirements_content, .requirements_img, .cta_img, .forInstitutions{
+        width: 100%;
+    }
+
+    .native_hero, .requirements_content, .forInstitutions{
+        order: -1;
+        align-items: center;
+    }
+
+    .forInstitutions{
+        padding-top: 80px;
+    }
+
+    .requirements_content, .requirements_img{
+        padding: 40px 0;
+    }
+
+    .requirements_content ul{
+        text-align: left;
+    }
+
+    .native_container{
+        padding: 0;
+    }
+
+    .requirements, .educationInst{
+        padding: 0px;
+    }
+
+    .didYouKnowInfo{
+        height: 600px;
+        padding: 160px 40px;
+    }
+
+    .didYouKnowInfo p{
+        width: 100%;
+    }
+
+    .slider_area{
+        width: 100%;
+    }
+
+    .success_stories{
+        padding: 40px 30px;
+    }
+  }

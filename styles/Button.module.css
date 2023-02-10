@@ -1,0 +1,13 @@
+.signup{
+    cursor: pointer;
+    padding: 5px 35px;
+    background-color: #DAAA9E;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: #fff;
+    font-size: 20px;
+    line-height: 35px;
+    width: fit-content;
+  }

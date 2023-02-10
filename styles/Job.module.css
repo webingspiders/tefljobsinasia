@@ -1,0 +1,97 @@
+.jobPreview{
+    background-color: #62559A;
+    overflow: hidden;
+    height: 800px;
+}
+
+.jobPreview_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+.jobPreviewDesc{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.jobPreview h1, .jobPreview p{
+    color: #fff;
+}
+
+.teaching{
+    position: absolute;
+    bottom: -220px;
+    right: 0;
+}
+
+.company_overview{
+    padding: 150px 0;
+}
+
+.company_overview h2, .company_overview p{
+    color: #62559A;
+}
+
+.company{
+    width: 50%;
+}
+
+.job{
+    width: 80%;
+}
+
+.job h3{
+    color: #62559A;
+}
+
+.job li{
+    list-style: disc;
+    color: #62559A;
+    font-size: 20px;
+}
+
+.cta{
+    padding: 150px 0;
+  }
+  
+  .cta_container{
+    align-items: center;
+  }
+  
+  .cta h2{
+    color: #62559A;
+  }
+  
+  .main_cta{
+    height: 900px;
+  }
+  
+  .cta_body{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+  }
+  
+  .native{
+    background: linear-gradient(130.52deg, rgba(218, 170, 158, 0.86) 43.64%, rgba(218, 170, 158, 0) 145.39%);
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 50px;
+    height: 300px;
+    width: 500px;
+  }
+  
+  .native p{
+    color: #fff;
+  }

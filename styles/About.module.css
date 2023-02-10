@@ -1,0 +1,221 @@
+    .hero{
+    margin-top: 160px;
+    flex-wrap: wrap;
+  }
+
+  .hero h1{
+    color: #62559A;
+  }
+
+  .hero p{
+    max-width: 1000px;
+    text-align: center;
+  }
+
+  .founders{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 120px;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .founders_quotes{
+    max-width: 700px;
+    background: linear-gradient(136.23deg, rgba(218, 170, 158, 0.9) 40.83%, rgba(218, 170, 158, 0) 128.54%);
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 62px;
+    padding: 40px 60px;
+    color: #fff;
+    height: fit-content;
+    position: relative;
+  }
+
+  #open{
+    position: absolute;
+    top: -30px;
+    left: -10px;
+  }
+
+    #close{
+    position: absolute;
+    bottom: -30px;
+    right: -10px;
+  }
+
+  .founders_img{
+    position: relative;
+    width: 50%;
+    min-height: 300px;
+  }
+  
+  .founders_quotes p{
+    color: white;
+    width: 100%;
+  }
+
+  .livinginHK{
+    margin-top: 150px;
+    background-color: #62559A;
+    padding: 160px 0;
+    width: 100%;
+  }
+  
+  .livinginHK_area{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 60px;
+  }
+  
+  .livinginHK_area h2{
+    color: #DAAA9E;
+    margin-left: 20px;
+  }
+  
+  .livinginHK_area p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff;
+  }
+  
+  .livinginHKimage{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    min-height: 600px;
+  }
+
+  .testimonials{
+    padding: 160px 0;
+  }
+
+  .testimonials h2{
+    color: #62559A;
+    margin-bottom: 80px;
+  }
+
+  .testimonial_container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 80px;
+    margin: 80px 0;
+  }
+
+  .testimonial_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+  }
+
+  .testimonial_picture{
+    width: 50%;
+    position: relative;
+    min-height: 600px;
+  }
+
+  .cta{
+    padding: 150px 0;
+  }
+  
+  .cta_container{
+    align-items: flex-start;
+    max-width: 900px;
+  }
+  
+  .cta h2{
+    color: #62559A;
+  }
+  
+  #cta_text{
+    width: 900px;
+  }
+  
+  .main_cta{
+    height: 900px;
+  }
+  
+  .cta_body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+  }
+  
+  .native{
+    background: linear-gradient(130.52deg, rgba(218, 170, 158, 0.86) 43.64%, rgba(218, 170, 158, 0) 145.39%);
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 50px;
+    height: 300px;
+    width: 400px;
+    position: relative;
+  }
+  
+  .native h3{
+    color: #fff;
+    z-index: 1;
+  }
+
+  .teaching{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.1;
+  }
+
+  @media(max-width: 940px){
+    .container{
+      width: 95%;
+    }
+  
+    .main_nav{
+      justify-content: flex-end;
+    }
+  
+    .nav_links{
+      display: none;
+    }
+
+    .hero{
+      margin-top: 100px;
+    }
+
+    .founders{
+      flex-direction: column;
+    }
+
+    .testimonial_container,.cta_body{
+      flex-direction: column;
+    }
+
+    .founders_img, .founders_quotes, .livinginHK_area, .livinginHKimage, .testimonial_picture, .testimonial_details{
+      width: 100%;
+    }
+
+    .testimonial_picture, .livinginHKimage{
+      min-height: 400px;
+    }
+
+    .livinginHKimage{
+      margin-top: 60px;
+    }
+
+    .testimonial_details{
+      order: -1;
+    }
+
+    .cta_body{
+      gap: 60px;
+    }
+  }
