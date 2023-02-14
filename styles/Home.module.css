@@ -330,4 +330,12 @@
   .cta_body{
     gap: 60px;
   }
+
+  .native{
+    width: 100%;
+  }
+
+  .accordion{
+    padding: 18px 0;
+  }
 }

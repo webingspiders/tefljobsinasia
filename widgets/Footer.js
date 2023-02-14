@@ -14,8 +14,8 @@ export default function Footer() {
               <p>Matching English speakers with their Dream Job</p>
               <div className={styles.nat}>
                 <p>TEFL Jobs in Asia</p>
-                <p>Block B, Shop 7, 2/F, Lung Fung Garden, Lung Sum Ave, Sheung Shui, Hong Kong</p>
-                <p>+852 5406 7892</p>
+                <p>Lung Sum 33, Tai Po, Hong Kong</p>
+                <p>+852 84810270</p>
               </div>
             </div>
             <div className={styles.useful_links}>

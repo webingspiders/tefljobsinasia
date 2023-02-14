@@ -71,6 +71,10 @@ li{
   margin: -10px -15px;
 }
 
+.slick-dots li.slick-active button:before{
+  color: #fff !important;
+}
+
 ::placeholder{
   color: grey;
 }
@@ -87,4 +91,8 @@ li{
   h3{
     font-size: 25px;
   }
+
+  ::-webkit-scrollbar {
+    width: 0;
+   }
 }

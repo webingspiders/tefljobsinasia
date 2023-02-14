@@ -5,11 +5,7 @@
     justify-content: center;
 }
 
-.application_form h2{
-    color: #62559A;
-}
-
-.application_form_title{
+#application_form_title{
     color: #62559A;
 }
 
@@ -32,6 +28,8 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
 .application_form label{
@@ -41,7 +39,7 @@
     color: #62559A;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     margin: 10px 0;
     min-width: 500px;
     width: 30%;
@@ -65,7 +63,7 @@
 }
 
 .application_form input{
-    width: 80%;
+    width: 100%;
     border: none;
     outline: none;
     background-color: #DAAA9E;

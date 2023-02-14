@@ -95,7 +95,12 @@
       align-items: center;
     }
 
-    .useful_links, .footer_nav_links, .social_links{
+    .legal_disclaimer{
+      display: flex;
+      text-align: center;
+    }
+
+    .useful_links, .footer_nav_links, .social_links, .legal_disclaimer{
       align-items: center;
       justify-content: center;
     }

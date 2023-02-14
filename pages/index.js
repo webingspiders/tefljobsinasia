@@ -1,23 +1,21 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Accordion from '../widgets/Accordion'
 import Header from '../widgets/Header'
 import styles from '../styles/Home.module.css'
 import hero from '../public/Hero Image TEFL.svg'
-import ftl from '../public/Fun to Learn English.svg'
 import hongkong from '../public/whychoosehk.svg'
-import teaching from '../public/English Teaching.svg'
 import education from '../public/For Education Institutes.svg'
 import about from '../public/Aboutus.svg'
 import Footer from '../widgets/Footer'
 import Container from '../widgets/Container'
 import Button from '../widgets/Button'
-import Slider from 'react-slick'
 import CTA from '../widgets/CTA'
 import native from '../public/For Native speakers.svg'
 import nonNative from '../public/Hero Image for NonNative.svg'
 import TestimonialSlider from '../widgets/TestimonialSlider'
+import HeadTag from '../widgets/HeadTag'
+import Slider from 'react-slick'
 
 export default function Home() {
 
@@ -69,20 +67,15 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>TEFL Jobs in Asia</title>
-        <meta name="description" content="TEFL Jobs in Asia" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Header />
+      <HeadTag title="TEFL Jobs in Asia" desc="We bring to you the latest in-demand TEFL jobs available in Hong Kong." />
+	    <Header />
 
       <Container main_class={styles.hero}>
           <h1>Start Your Teaching in Hong Kong</h1>
           <p>We bring to you the latest in-demand TEFL jobs available in Hong Kong.</p>
           <div className={styles.hero_action}>
-            <Button><Link href="/native">Apply For Native Jobs</Link></Button>
-            <Button><Link href="/non-native">Apply For Non-native Jobs</Link></Button>
+            <Button><Link href="/native">Apply For Native TEFL Jobs</Link></Button>
+            <Button><Link href="/non-native">Apply For Non-native TEFL Jobs</Link></Button>
           </div>
           <div className={styles.hero_img}>
             <Image src={hero} layout='fill' />
@@ -91,17 +84,17 @@ export default function Home() {
 
       <Container main_class={styles.whychoosehk} container_class={styles.whychoosehk_container}>
           <h2>Why Teach in Hong Kong?</h2>
-          <p>Almost over 100 native english speakers are working as teachers in Hong Kong</p>
+          <p>Almost over 100 native english speakers are working as teachers in Hong Kong.</p>
           <div className={styles.whychoosehk_area}>
-            <div className={styles.whychoosehk_img}>
-              <Image src={hongkong} layout='fill'/>
-            </div>
-            <div className={styles.whychoosehk_content_area}>
+          <div className={styles.whychoosehk_content_area}>
               <div className={styles.whyTeach}>
           {whyTeachData.map(({ title, content}) => (
             <Accordion title={title} content={content} color='#62559A' />
           ))}
-        </div>
+              </div>
+            </div>
+            <div className={styles.whychoosehk_img}>
+              <Image src={hongkong} layout='fill'/>
             </div>
           </div>
       </Container>
@@ -128,15 +121,14 @@ export default function Home() {
         <h2>In TEFL Jobs in Asia...</h2>
         <div className={styles.aboutus_container}>
           <div className={styles.content_slider}>
-            {/* <Slider {...settings}> */}
+            <Slider {...settings}>
               <div className={styles.content_slide}>
                 <p>We aim to find the right fit for both the institutes and the teachers as we think this is the only way for students to enjoy learning.</p>
-                <p>And if you possess that passion for teaching and the determination to share that knowledge, then you’re on the right page.</p>
               </div>
-              {/* <div className={styles.content_slide}>
-                
-              </div> */}
-            {/* </Slider> */}
+              <div className={styles.content_slide}>
+                <p>And if you possess that passion for teaching and the determination to share that knowledge, then you’re on the right page.</p>                
+              </div>
+            </Slider>
           </div>
           <div className={styles.aboutus_img}>
             <Image src={about} layout="fill" />

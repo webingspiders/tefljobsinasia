@@ -50,7 +50,7 @@ export default function About() {
 We understand that moving to another country can often involve a significant degree of preparation. That’s why we’ve made the job search process as easy as possible by offering a comprehensive range of jobs in the Asia Pacific region.</p>
         <div className={styles.founders}>
             <div className={styles.founders_img}>
-                <Image src={founders} object-fit="cover" />
+                <Image src={founders} layout="fill" />
             </div>
             <div className={styles.founders_quotes}>
               <Image src={open} id={styles["open"]} />

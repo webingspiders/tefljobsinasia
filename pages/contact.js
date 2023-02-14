@@ -15,7 +15,7 @@ export default function Contact() {
 
   const handleContact = async() => {
     e.preventDefault();
-    const {data} = await axios.post('http://localhost:4000/api/v1/newsletter/register', {
+    const {data} = await axios.post('api/v1/newsletter/register', {
       name, email, phone, message
     })
     data.success && setResponse('Thank you for subscribing to our newsletter!')
@@ -25,7 +25,7 @@ export default function Contact() {
     <Header/>
     <Container main_class={styles.contact_us}>
         <h1>Contact Us</h1>
-        <p>Tell us your query here or send us a mail at abc@tefljobsinasia.com</p>
+        <p>Tell us your query here or send us a mail at <a style={{color: '#DAAA9E'}} href="mailto:contact@tefljobsinasia.com">contact@tefljobsinasia.com</a></p>
         <form onSubmit={handleContact}>
             <label>
             Name

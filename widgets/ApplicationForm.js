@@ -36,7 +36,7 @@ const ApplicationForm = (props) => {
 
   return (
     <form className={styles.application_form} onSubmit={handleSubmit}>
-        <h2 className={styles.application_form_title}>Application Form</h2>
+        <h2 id={styles["application_form_title"]}>Application Form</h2>
       <div className={styles.application_form_body}>
         <div className={styles.application_form_body_basics}>
           <label>First Name

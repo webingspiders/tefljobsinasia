@@ -4,8 +4,10 @@ import Footer from '../widgets/Footer'
 import Container from '../widgets/Container'
 import {useEffect, useState} from 'react'
 import axios from 'axios'
-
+import NODE_URL from '../config/config.js'
 export default function Blogs() {
+
+	console.log(NODE_URL)
 
   const [blogData, setBlogData] = useState([])
 
@@ -16,7 +18,7 @@ export default function Blogs() {
   },[])
 
   const fetchData = async() => {
-    const {data} = await axios.get('http://localhost:4000/api/v1/blogs')
+    const {data} = await axios.get(`api/v1/blogs`)
     console.log(data.blogs)
     data.success && setBlogData(data.blogs)
   }

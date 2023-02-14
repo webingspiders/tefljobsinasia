@@ -76,6 +76,10 @@
         width: 90%;
     }
 
+    .contact_us{
+        padding: 10px 0;
+    }
+
     .contact_us label{
         justify-content: flex-start;
         align-items: flex-start;

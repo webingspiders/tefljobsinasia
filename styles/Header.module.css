@@ -185,9 +185,9 @@
 
     .mobile_menu_popup{
       display: block;
-      position: absolute;
+      position: fixed;
       top: 0;
-      right: 0px;
+      left: 0;
       background-color: #DAAA9E;
       color: #fff;
       width: 100vw;

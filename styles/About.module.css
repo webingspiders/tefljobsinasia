@@ -14,7 +14,7 @@
 
   .founders{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 120px;
     width: 100%;
@@ -46,8 +46,9 @@
 
   .founders_img{
     position: relative;
-    width: 50%;
     min-height: 300px;
+    width: 270px;
+    max-height: 300px;
   }
   
   .founders_quotes p{
@@ -213,6 +214,10 @@
 
     .testimonial_details{
       order: -1;
+    }
+
+    .native{
+      width: 100%;
     }
 
     .cta_body{
