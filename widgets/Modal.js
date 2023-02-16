@@ -2,6 +2,7 @@ import styles from '../styles/Modal.module.css'
 import Button from './Button'
 import { useState } from 'react'
 import ApplicationForm from './ApplicationForm';
+import { RxCross1 } from 'react-icons/rx';
 
 export default function Modal(props) {
 
@@ -28,7 +29,7 @@ export default function Modal(props) {
                 <div className={styles.overlay} onClick={toggleModal}></div>
                 <div className={styles.modal_content}>
                     <ApplicationForm />
-                    <button className={styles.close_popup_menu} onClick={toggleModal} type="button">X</button>
+                    <button className={styles.close_popup_menu} onClick={toggleModal} type="button"><RxCross1 /></button>
                 </div>
             </div>
             )}

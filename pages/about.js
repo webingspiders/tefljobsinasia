@@ -16,6 +16,7 @@ import native from '../public/For Native speakers.svg'
 import nonNative from '../public/Hero Image for NonNative.svg'
 import open from '../public/Comma Open.svg'
 import close from '../public/Comma Close.svg'
+import HeadTag from '../widgets/HeadTag'
 
 export default function About() {
 
@@ -36,11 +37,8 @@ export default function About() {
 
   return (
     <>
-      <Head>
-        <title>TEFL Jobs in Asia | About Us</title>
-        <meta name="description" content="TEFL Jobs in Asia" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadTag title="About TEFL Jobs in Asia" desc="At TEFL Jobs In Asia, we’re committed to connecting aspiring teachers with excellent opportunities, enabling them to experience all the joys and challenges related to teaching English in Asia.
+We understand that moving to another country can often involve a significant degree of preparation." />
 
       <Header />
 
@@ -50,7 +48,7 @@ export default function About() {
 We understand that moving to another country can often involve a significant degree of preparation. That’s why we’ve made the job search process as easy as possible by offering a comprehensive range of jobs in the Asia Pacific region.</p>
         <div className={styles.founders}>
             <div className={styles.founders_img}>
-                <Image src={founders} layout="fill" />
+                <Image src={founders} layout="responsive" />
             </div>
             <div className={styles.founders_quotes}>
               <Image src={open} id={styles["open"]} />
@@ -70,7 +68,7 @@ We understand that moving to another country can often involve a significant deg
             </div>
             </div>
             <div className={styles.livinginHKimage}>
-              <Image src={hongkong} layout="fill" />
+              <Image src={hongkong} layout="responsive"/>
             </div>
       </Container>
 
@@ -79,7 +77,7 @@ We understand that moving to another country can often involve a significant deg
 
           <div className={styles.testimonial_container}>
             <div className={styles.testimonial_picture}>
-              <Image src={megan} layout="fill" />
+              <Image src={megan} layout="responsive" />
             </div>
             <div className={styles.testimonial_details}>
               <p>“I absolutely loved my experience teaching English in Hong Kong. The people were so friendly and welcoming, and I cherished my time spent living in the New Territories. The culture was fascinating and I never got tired of trying something new and learning more about the area. I fell in love with the city, its architecture and history, and I was so happy I got to spend time there. I'm so thankful for the opportunity to have lived and worked in Hong Kong. It was an experience I'll never forget."</p>
@@ -94,13 +92,13 @@ We understand that moving to another country can often involve a significant deg
             </div>
 
             <div className={styles.testimonial_picture}>
-              <Image src={noah} layout="fill" />
+              <Image src={noah} layout="responsive" />
             </div>
           </div>
 
           <div className={styles.testimonial_container}>
             <div className={styles.testimonial_picture}>
-              <Image src={joe}  layout="fill" />              
+              <Image src={joe}  layout="responsive" />              
             </div>
 
             <div className={styles.testimonial_details}>
@@ -116,7 +114,7 @@ We understand that moving to another country can often involve a significant deg
               <span>~ Anabelle W.</span>
             </div>
             <div className={styles.testimonial_picture}>
-              <Image src={anabelle} layout="fill" />
+              <Image src={anabelle} layout="responsive" />
             </div>
           </div>
         </Container>

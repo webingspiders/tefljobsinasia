@@ -22,11 +22,11 @@
     line-height: 1.4;
     background: #f1f1f1;
     padding: 14px 28px;
-    width: 95%;
+    width: 90%;
     background-color: #EFEADD;
     border-radius: 50px;
     height: 900px;
-    overflow: scroll;
+    overflow-y: scroll;
     margin: 0 auto;
 }
 
@@ -36,12 +36,22 @@
     right: 10px;
     color: #DAAA9E;
     cursor: pointer;
-    border: 2px solid #DAAA9E;
-    border-radius: 50%;
+    border: none;
     outline: none;
-    font-weight: 300;
-    font-size: 30px;
+    font-size: 29px;
     background: none;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  @media(max-width: 940px){
+    .modal_content{
+        height: 700px;
+    }
+
+    .close_popup_menu{
+        top: 20px;
+        right: 20px;
+    }
   }
 
 

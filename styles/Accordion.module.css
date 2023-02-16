@@ -43,6 +43,7 @@
     overflow: hidden;
     font-size: 18px;
     transition: height ease 0.5s;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .accordion_content.open{

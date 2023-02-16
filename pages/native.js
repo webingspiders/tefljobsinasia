@@ -16,6 +16,7 @@ import Modal from '../widgets/Modal'
 import CTA from '../widgets/CTA'
 import { useRef } from 'react'
 import TestimonialSlider from '../widgets/TestimonialSlider'
+import HeadTag from '../widgets/HeadTag'
 
 export default function Native() {
 
@@ -27,11 +28,7 @@ export default function Native() {
 
   return (
     <>
-      <Head>
-        <title>TEFL Jobs in Asia for Native English Speakers</title>
-        <meta name="description" content="TEFL Jobs in Asia" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <HeadTag title="Teaching Jobs for Native English Speakers" desc="In TEFL Jobs In Asia we’ve hand picked some exciting job opportunities. The qualifications needed to apply for the job is based on the different recruiting demands. Check below to see the requirements and verify your potential." />
 
       <Header />
 
@@ -39,7 +36,7 @@ export default function Native() {
         container_class={styles.native_container}
         align="row">
           <div className={styles.native_img}>
-            <Image src={native} layout="fill" />
+            <Image src={native} layout="responsive" />
           </div>
           <div className={styles.native_hero}>
             <h1>TEFL Jobs for Native English Speakers</h1>
@@ -63,7 +60,7 @@ export default function Native() {
             <Modal text="Apply Now"/>
         </div>
         <div className={styles.requirements_img}>
-          <Image src={hero} layout="fill" />
+          <Image src={hero} layout="responsive" />
         </div>
       </Container>
 
@@ -88,7 +85,7 @@ export default function Native() {
           <Button><Link href="/non-native">Check It Out</Link></Button>
         </div>
         <div className={styles.cta_img}>
-          <Image src={NonNativeCTA} layout="fill" />
+          <Image src={NonNativeCTA} layout="responsive" />
         </div>
       </Container>
 

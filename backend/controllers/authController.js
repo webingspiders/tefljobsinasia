@@ -65,7 +65,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
   try {
     await sendEmail({
       email: user.email,
-      subject: 'Book-Hero Password recovery',
+      subject: 'TEFL Jobs in Asia Password recovery',
       message,
     });
 

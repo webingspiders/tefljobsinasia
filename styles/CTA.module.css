@@ -15,10 +15,8 @@
     color: #ffffff;
   }
   .signup_img{
-    position: relative;
-    min-height: 600px;
-    height: 100%;
-    width: 50%;
+    display: block;
+    width: 40%;
   }
 
   .signup_action{

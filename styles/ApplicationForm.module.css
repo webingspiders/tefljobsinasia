@@ -10,10 +10,10 @@
 }
 
 .application_form_body{
-    width: 90%;
+    width: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 60px 0;
 }
 
@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin: 10px 0;
+    margin: 6px 0;
     min-width: 500px;
     width: 30%;
 }
@@ -63,7 +63,7 @@
 }
 
 .application_form input{
-    width: 100%;
+    width: 80%;
     border: none;
     outline: none;
     background-color: #DAAA9E;
@@ -149,3 +149,27 @@
 .terms input{
     width: fit-content;
 }
+
+@media(max-width: 940px){
+
+    #application_form_title{
+        margin-top: 60px;
+    }
+
+    .application_form label{
+        min-width: 300px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .application_form_body_specifics{
+        gap: 50px;
+    }
+
+    .radio{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+  }

@@ -16,7 +16,7 @@ const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth');
 //Adding Routes
 router.route('/admin/register').post(registerUser);
 router.route('/admin/login').post(loginUser);
-router.route('/admin/logout').get(logoutUser);
+router.route('/admin/logout').post(logoutUser);
 router.route('/admin/me').get(isAuthenticatedUser, getUserProfile);
 router.route('/admin/password/forgot').post(forgotPassword);
 router.route('/admin/password/reset/:token').put(resetPassword);

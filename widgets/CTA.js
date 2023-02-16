@@ -34,7 +34,7 @@ const CTA = (props) => {
           <span>{response}</span>
         </div>
         <div className={styles.signup_img}>
-          <Image src={Signup} layout="fill"/>
+          <Image src={Signup} layout="responsive"/>
         </div>
     </Container>
   );

@@ -4,6 +4,7 @@ import Footer from '../widgets/Footer'
 import Container from '../widgets/Container'
 import { useState } from 'react'
 import axios from 'axios'
+import HeadTag from '../widgets/HeadTag'
 
 export default function Contact() {
 
@@ -13,7 +14,7 @@ export default function Contact() {
   const [message, setMessage] = useState('')
   const [response, setResponse] = useState('')
 
-  const handleContact = async() => {
+  const handleContact = async(e) => {
     e.preventDefault();
     const {data} = await axios.post('api/v1/newsletter/register', {
       name, email, phone, message
@@ -22,6 +23,7 @@ export default function Contact() {
   }
   return (
     <>
+    <HeadTag title="Contact TEFL Jobs in Asia" />
     <Header/>
     <Container main_class={styles.contact_us}>
         <h1>Contact Us</h1>

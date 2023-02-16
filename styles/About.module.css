@@ -45,10 +45,8 @@
   }
 
   .founders_img{
-    position: relative;
-    min-height: 300px;
-    width: 270px;
-    max-height: 300px;
+    display: block;
+    width: 50%;
   }
   
   .founders_quotes p{
@@ -83,10 +81,8 @@
   }
   
   .livinginHKimage{
-    position: relative;
-    width: 50%;
-    height: 100%;
-    min-height: 600px;
+    display: block;
+    width: 40%;
   }
 
   .testimonials{
@@ -115,9 +111,8 @@
   }
 
   .testimonial_picture{
-    width: 50%;
-    position: relative;
-    min-height: 600px;
+    display: block;
+    width: 40%;
   }
 
   .cta{

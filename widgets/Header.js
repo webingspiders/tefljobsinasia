@@ -3,7 +3,7 @@ import Link from 'next/link'
 import FooterLogo from '../public/TEFL Jobs in Asia Logo.png'
 import styles from '../styles/Header.module.css'
 import Container from './Container'
-import {RxCaretDown} from 'react-icons/rx'
+import {RxCaretDown, RxCross1 } from 'react-icons/rx'
 import { FaSignInAlt, FaHamburger, FaCross } from 'react-icons/fa'
 import {useState} from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -75,7 +75,7 @@ export default function Header() {
                     animate="visible"
                     exit="exit"
                     className={styles.mobile_menu_popup}>
-                        <button className={styles.close_popup_menu} onClick={handleClose} type="button">X</button>
+                        <button className={styles.close_popup_menu} onClick={handleClose} type="button"><RxCross1 /></button>
                         <ul className={styles.mobile_nav_links}>
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/about">About Us</Link></li>

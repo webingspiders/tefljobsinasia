@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '../widgets/Header'
@@ -7,7 +6,6 @@ import hero from '../public/non-native-requirements.svg'
 import NativeCTA from '../public/Job Opening for NonNatives.svg'
 import buildings from '../public/Did You Know HK Buildings.svg'
 import clouds from '../public/Did You Know HK Clouds.svg'
-import Signup from '../public/Sign Up.svg'
 import nonNative from '../public/Hero Image for NonNative.svg'
 import Footer from '../widgets/Footer'
 import Container from '../widgets/Container'
@@ -16,6 +14,7 @@ import CTA from '../widgets/CTA'
 import { useRef } from 'react'
 import Modal from '../widgets/Modal'
 import TestimonialSlider from '../widgets/TestimonialSlider'
+import HeadTag from '../widgets/HeadTag'
 
 export default function NonNative() {
 
@@ -27,11 +26,7 @@ export default function NonNative() {
 
   return (
     <>
-      <Head>
-        <title>TEFL Jobs in Asia for Native English Speakers</title>
-        <meta name="description" content="TEFL Jobs in Asia" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <HeadTag title="Teaching Jobs for Non-native English speakers" desc="In TEFL Jobs In Asia we’ve hand picked some exciting job opportunities. The qualifications needed to apply for the job is based on the different recruiting demands. Check below to see the requirements and verify your potential." />
 
       <Header />
 
@@ -39,7 +34,7 @@ export default function NonNative() {
         container_class={styles.native_container}
         align="row">
           <div className={styles.native_img}>
-            <Image src={nonNative} layout="fill" />
+            <Image src={nonNative} layout="responsive" />
           </div>
         <div className={styles.native_hero}>
             <h1>TEFL Jobs For Non-Native English Speakers</h1>
@@ -61,7 +56,7 @@ export default function NonNative() {
             <Modal text="Apply Now"/>
         </div>
         <div className={styles.requirements_img}>
-          <Image src={hero} layout="fill" />
+          <Image src={hero} layout="responsive" />
         </div>
       </Container>
 
@@ -78,7 +73,7 @@ Apply now and take another step toward your dream job.</p>
           <Button><Link href="/native">Check It Out</Link></Button>
         </div>
         <div className={styles.cta_img}>
-          <Image src={NativeCTA} layout="fill" />
+          <Image src={NativeCTA} layout="responsive" />
         </div>
       </Container>
 

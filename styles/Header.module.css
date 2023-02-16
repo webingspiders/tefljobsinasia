@@ -202,8 +202,7 @@
       right: 10px;
       color: #fff;
       cursor: pointer;
-      border: 2px solid #fff;
-      border-radius: 50%;
+      border: none;
       outline: none;
       font-weight: 300;
       font-size: 30px;
@@ -222,7 +221,7 @@
     .mobile_nav_links li{
       color: #fff;
       font-weight: 400;
-      font-size: 30px;
+      font-size: 25px;
       cursor: pointer;
       position: relative;
     }

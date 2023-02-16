@@ -1,0 +1,23 @@
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0;
+    width: 100%;
+    position: relative;
+}
+
+.dashboard_logout{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    display: block;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: #DAAA9E;
+    background-color: #EFEADD;
+}
