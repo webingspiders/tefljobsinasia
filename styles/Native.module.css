@@ -34,10 +34,6 @@
     padding: 250px 0;
 }
 
-.requirements_content h2, .requirements_content p, .requirements_content li{
-    color: #fff;
-}
-
 .requirements_content li{
     list-style: disc;
 }

@@ -47,5 +47,13 @@ app.get('/native', (req,res) => {
 app.get('/non-native', (req,res) => {
   res.sendFile(path.join(__dirname, '../out/non-native.html'))
 })
+app.get('/admin', (req,res) => {
+  res.sendFile(path.join(__dirname, '../out/admin.html'))
+})
+app.get('/admin/dashboard', (req,res) => {
+  res.sendFile(path.join(__dirname, '../out/admin/dashboard.html'))
+})
+
+
 
 module.exports = app;

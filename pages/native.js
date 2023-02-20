@@ -48,13 +48,13 @@ export default function Native() {
       
       <Container align="row" main_class={styles.requirements}>
         <div ref={requirementsRef} className={styles.requirements_content}>
-            <h2>Requirements</h2>
-            <p>You’ll need to have your Visa as a Native English Speaker.</p>
+            <h2 style={{color: '#ffffff'}}>Requirements</h2>
+            <p style={{color: '#ffffff'}}>You’ll need to have your Visa as a Native English Speaker.</p>
             <ul>
-              <li>High School Diploma/Any Bachelor Degree + TEFL/TESOL/CELTA.</li>
-              <li>High School Diploma/Any Bachelor Degree + Relevant experience.</li>
-              <li>High School Diploma/Any Bachelor Degree + TEFL/TESOL/CELTA + Relevant experience.</li>
-              <li>Bachelor of Education + TEFL/TESOL/CELTA + Relevant experience (Ideal Requirements).</li>
+              <li style={{color: '#ffffff'}}>High School Diploma/Any Bachelor Degree + TEFL/TESOL/CELTA.</li>
+              <li style={{color: '#ffffff'}}>High School Diploma/Any Bachelor Degree + Relevant experience.</li>
+              <li style={{color: '#ffffff'}}>High School Diploma/Any Bachelor Degree + TEFL/TESOL/CELTA + Relevant experience.</li>
+              <li style={{color: '#ffffff'}}>Bachelor of Education + TEFL/TESOL/CELTA + Relevant experience (Ideal Requirements).</li>
             </ul>
             <p id={styles["statement"]}>If you meet any the four above requirements you can click the below button and submit your CV by filling up out our Admission Form.</p>
             <Modal text="Apply Now"/>

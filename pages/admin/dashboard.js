@@ -21,7 +21,7 @@ export default function Dashboard() {
   axios.defaults.withCredentials = true;
 
   const fetchData = async() => {
-    const {data} = await axios.get(`api/v1/admin/me`, {
+    const {data} = await axios.get(`https://tefljobsinasia.com/api/v1/admin/me`, {
       withCredentials: true
     });
     setUserData(data.user)
@@ -29,7 +29,7 @@ export default function Dashboard() {
   }
 
   const handleLogout = async() => {
-    const {data} = await axios.post('api/v1/admin/logout', { withCredentials: true })
+    const {data} = await axios.post('https://tefljobsinasia.com/api/v1/admin/logout', { withCredentials: true })
     
     if(data.success){
       setLoading(true)
