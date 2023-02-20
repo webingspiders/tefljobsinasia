@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 import Loader from '../../widgets/Loader'
 import Link from 'next/link'
 
-export default function Dashboard() {
+export default function Applications() {
 
   const [loading, setLoading] = useState(true)
   const [userData, setUserData] = useState({})
@@ -36,9 +36,7 @@ export default function Dashboard() {
 
     let applicantData = await axios.get('http://localhost:4000/api/v1/applications')
     setApplicants(applicantData.data.applicants)
-
-    let newsletterData = await axios.get('http://localhost:4000/api/v1/newsletters')
-    setNewsletters(newsletterData.data.subscribers)
+    console.log(applicants)
     
   }
 
@@ -72,21 +70,45 @@ export default function Dashboard() {
                 className={styles.dashboard_logout} onClick={handleLogout} type="button">Logout <HiOutlineLogout /></motion.button>
       </aside>
       <div className={styles.admin_area}>
-        <h1>Welcome {userData.name} !</h1>
-        <div className={styles.admin_data}>
-          <Link href="/admin/applications">
-            <div className={styles.admin_data_applicants}>
-              <h3>Applications Submitted</h3>
-              <span>{applicants.length}</span>
-            </div>
-          </Link>
-          
-          <Link href="/admin/newsletters">
-            <div className={styles.admin_data_applicants}>
-            <h3>Newsletters Subscribed</h3>
-            <span>{newsletters.length}</span>
-            </div>
-          </Link>
+        <h1>Applications Submitted</h1>
+        <div className={styles.applications_data}>
+            <table id={styles["applicants"]}>
+                <tbody>
+                <tr>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone No.</th>
+                <th>Experience</th>
+                <th>Country</th>
+                <th>Qualifications</th>
+                <th>CV / Video CV</th>
+                <th>Native / Non-native</th>
+                <th>More info</th>
+                </tr>
+                {applicants.map((applicant, key) => {
+                    return(
+                        <tr key={key}>
+                            <td>{applicant.firstName}</td>
+                            <td>{applicant.middleName}</td>
+                            <td>{applicant.lastName}</td>
+                            <td>{applicant.email}</td>
+                            <td>{applicant.phoneNo}</td>
+                            <td>{applicant.experience}</td>
+                            <td>{applicant.country}</td>
+                            <td>{applicant.qualification}</td>
+                            <td> 
+                                {applicant.cv && <Link href={`/${applicant.cv}`}>Download CV</Link>}<br/>
+                                {applicant.videoCv && <Link href={`/${applicant.videoCv}`}>Download Video</Link>}
+                            </td>
+                            <td>{applicant.native}</td>
+                            <td>{applicant.dateOfBirth}<br/> {applicant.addressline1} {applicant.addressline2}</td>
+                        </tr>
+                    )
+                })}
+                </tbody>
+            </table>
         </div>
       </div>
     </Container>

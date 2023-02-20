@@ -1,23 +1,122 @@
+.dashboard_main{
+    height: 100vh;
+    flex-wrap: nowrap;
+}
+
 .dashboard{
     display: flex;
-    flex-direction: column;
+    width: 100% !important;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 150px 0;
-    width: 100%;
-    position: relative;
+    height: 100%;
+    max-width: none !important;
 }
 
 .dashboard_logout{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
+    font-size: 25px;
     display: block;
     cursor: pointer;
     border: none;
     outline: none;
     font-weight: 600;
     color: #DAAA9E;
-    background-color: #EFEADD;
+    background-color: #62559A;
 }
+
+.sidebar{
+    width: 15%;
+    height: 100%;
+    background-color: #62559A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.admin_area{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 0;
+    gap: 80px;
+    overflow: scroll;
+}
+
+.admin_nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.admin_data{
+    min-height: 700px;
+    width: 95%;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin_data_applicants{
+    background: linear-gradient(130.52deg, rgba(218, 170, 158, 0.86) 43.64%, rgba(218, 170, 158, 0) 145.39%);
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 50px;
+    height: 300px;
+    width: 460px;
+}
+
+.admin_data_applicants span{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.admin_data_applicants h3{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.applications_data{
+    width: 100%;
+}
+
+#applicants {
+    border: 2px solid #62559A;
+    width: 99%;
+    margin: 0 auto;
+  }
+    
+#applicants  th {
+    border-bottom: 1px solid #DAAA9E;
+    border-left: 1px solid #DAAA9E;
+    color: #DAAA9E;
+    padding: 20px 10px;
+  }
+    
+#applicants  td {
+    text-align: center;
+    color: #62559A;
+    border-left: 1px solid #62559A;
+    font-size: 15px;
+    padding: 20px 10px;
+  }
+
+  #applicants td a{
+    color: black;
+    text-decoration: underline;
+  }

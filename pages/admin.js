@@ -24,7 +24,7 @@ export default function Admin() {
 
   const handleContact = async(e) => {
     e.preventDefault();
-    const {data} = await axios.post('api/v1/admin/login', {
+    const {data} = await axios.post('http://localhost:4000/api/v1/admin/login', {
       email, password
     }, {withCredentials: true})
     if(data.success){

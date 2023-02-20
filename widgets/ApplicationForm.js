@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../styles/ApplicationForm.module.css'
 import axios from 'axios';
+import { animate } from 'framer-motion';
 
 const ApplicationForm = (props) => {
 
@@ -25,18 +26,25 @@ const ApplicationForm = (props) => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
+    let videoData, cvData;
 
-    const url = 'api/v1/application/fileupload';
+    if(cv != ''){
+    const url = 'http://localhost:4000/api/v1/application/fileupload';
     const formData = new FormData();
     formData.append('file', cv);
-    await axios.post(url, formData)
+    const cvupload = await axios.post(url, formData)
+    cvData = cvupload.data.filename
+    }
 
+    if(videoCv != ''){
     const formData2 = new FormData();
     formData2.append('file', videoCv);
-    await axios.post(url, formData2)
+    const videoupload = await axios.post(url, formData2)
+    videoData = videoupload.data.filename
+    }
 
-    const {data} = await axios.post('api/v1/application/submit', {
-      firstName, middleName, lastName, email, phoneNo, dateOfBirth, addressline1, addressline2, experience, country, qualification, native, agreement, cv: cv.name, videoCv: videoCv.name
+    const {data} = await axios.post('http://localhost:4000/api/v1/application/submit', {
+      firstName, middleName, lastName, email, phoneNo, dateOfBirth, addressline1, addressline2, experience, country, qualification, native, agreement, cv: cvData, videoCv: videoData
     })
     data.success && setResponse('Thank you for submitting your application with TEFL Jobs in Asia! We will let you know about your application status shortly.')
   }

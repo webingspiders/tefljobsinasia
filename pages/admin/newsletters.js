@@ -10,11 +10,10 @@ import { motion } from 'framer-motion'
 import Loader from '../../widgets/Loader'
 import Link from 'next/link'
 
-export default function Dashboard() {
+export default function Newsletters() {
 
   const [loading, setLoading] = useState(true)
   const [userData, setUserData] = useState({})
-  const [applicants, setApplicants] = useState([])
   const [newsletters, setNewsletters] = useState([])
   const router = useRouter()
   useEffect(() => {
@@ -33,9 +32,6 @@ export default function Dashboard() {
   }catch(err){
     router.push('/admin')
   }
-
-    let applicantData = await axios.get('http://localhost:4000/api/v1/applications')
-    setApplicants(applicantData.data.applicants)
 
     let newsletterData = await axios.get('http://localhost:4000/api/v1/newsletters')
     setNewsletters(newsletterData.data.subscribers)
@@ -72,21 +68,26 @@ export default function Dashboard() {
                 className={styles.dashboard_logout} onClick={handleLogout} type="button">Logout <HiOutlineLogout /></motion.button>
       </aside>
       <div className={styles.admin_area}>
-        <h1>Welcome {userData.name} !</h1>
-        <div className={styles.admin_data}>
-          <Link href="/admin/applications">
-            <div className={styles.admin_data_applicants}>
-              <h3>Applications Submitted</h3>
-              <span>{applicants.length}</span>
-            </div>
-          </Link>
-          
-          <Link href="/admin/newsletters">
-            <div className={styles.admin_data_applicants}>
-            <h3>Newsletters Subscribed</h3>
-            <span>{newsletters.length}</span>
-            </div>
-          </Link>
+        <h1>Applications Submitted</h1>
+        <div className={styles.applications_data}>
+            <table id={styles["applicants"]}>
+                <tbody>
+                <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message (if any) </th>
+                </tr>
+                {newsletters.map((applicant, key) => {
+                    return(
+                        <tr key={key}>
+                            <td>{applicant.name}</td>
+                            <td>{applicant.email}</td>
+                            <td>{applicant.message}</td>
+                        </tr>
+                    )
+                })}
+                </tbody>
+            </table>
         </div>
       </div>
     </Container>

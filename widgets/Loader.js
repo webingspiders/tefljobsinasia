@@ -6,6 +6,7 @@ const Loader = ({ title, content, color }) => {
 
   return (
     <div className={styles.loader_wrapper}>
+      <h1>Please wait while we load the page.</h1>
       <div className={styles.loader}></div>
     </div>
   );

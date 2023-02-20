@@ -5,6 +5,7 @@ import Container from '../widgets/Container'
 import { useState } from 'react'
 import axios from 'axios'
 import HeadTag from '../widgets/HeadTag'
+import { RxStretchHorizontally } from 'react-icons/rx'
 
 export default function Contact() {
 
@@ -16,10 +17,10 @@ export default function Contact() {
 
   const handleContact = async(e) => {
     e.preventDefault();
-    const {data} = await axios.post('api/v1/newsletter/register', {
+    const {data} = await axios.post('http://localhost:4000/api/v1/newsletter/contact', {
       name, email, phone, message
     })
-    data.success && setResponse('Thank you for subscribing to our newsletter!')
+    data.success && setResponse('Thank you for contacting us. We will reach out to you shortly.')
   }
   return (
     <>

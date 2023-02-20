@@ -6,12 +6,17 @@
     left: 0;
     display: grid;
     place-items: center;
-    background: rgba(0, 0, 0, 0.4);
+    background-color: #DAAA9E;
+    z-index: 99;
+  }
+
+  .loader_wrapper h1{
+    color: #fff;
   }
 
   .loader {
     border: 16px solid #e3e3e3;
-    border-top: 16px solid #3498db;
+    border-top: 16px solid #62559A;
     border-radius: 50%;
     width: 140px;
     height: 140px;

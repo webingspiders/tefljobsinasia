@@ -13,7 +13,7 @@ const CTA = (props) => {
   const [response, setResponse] = useState('');
 
   const newsletterSignup = async() => {
-    const {data} = await axios.post('api/v1/newsletter/register', {
+    const {data} = await axios.post('http://localhost:4000/api/v1/newsletter/register', {
       name, email
     })
     data.success && setResponse('Thank you for subscribing to our newsletter!')
